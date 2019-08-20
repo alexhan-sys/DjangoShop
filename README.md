@@ -1,6 +1,6 @@
 # Django Online Shop
 > This is a e-commerce website built on django and besigned with Bootstrap.
-### Installation:
+## Installation:
 
 **1.Setup Virtualenv**
 ```sh
@@ -30,9 +30,9 @@ python manage.py runserver
 ```
 
 # Screenshot:
-### Homepage
+## Homepage
 ![](screenshot/homepage.png)
-### Product Details Page
+## Product Details Page
 ![](screenshot/detail.png)
-### Cart Page
+## Cart Page
 ![](screenshot/cart.png)
