@@ -29,10 +29,10 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-# Screenshot:
-## Homepage
+# Screenshots:
+## Homepage:
 ![](screenshot/homepage.png)
-## Product Details Page
+## Product Page:
 ![](screenshot/detail.png)
-## Cart Page
+## Cart Page:
 ![](screenshot/cart.png)
