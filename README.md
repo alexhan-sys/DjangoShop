@@ -35,4 +35,4 @@ python manage.py runserver
 ### Product Details Page
 ![](screenshot/detail.png)
 ### Cart Page
-![](screenshot/homepage.png)
+![](screenshot/cart.png)
