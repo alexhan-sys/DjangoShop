@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Tech-Shop</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+  <!-- Font Awesome CSS-->
+  <link rel="stylesheet" href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}">
+  <!-- Google fonts - Roboto-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700">
+  <!-- Bootstrap Select-->
+  <link rel="stylesheet" href="{% static 'vendor/bootstrap-select/css/bootstrap-select.min.css' %}">
+  <!-- owl carousel-->
+  <link rel="stylesheet" href="{% static 'vendor/owl.carousel/assets/owl.carousel.css' %}">
+  <link rel="stylesheet" href="{% static 'vendor/owl.carousel/assets/owl.theme.default.css' %}">
+  <!-- theme stylesheet-->
+  <link rel="stylesheet" href="{% static 'css/style.default.css' %}" id="theme-stylesheet">
+  <!-- Custom stylesheet - for your changes-->
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+</head>
+<body>
+    <div id="all">
+     
+      <!-- Navbar Start-->
+      <header class="nav-holder make-sticky">
+        <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
+          <div class="container"><a href="{% url 'myapp:product_list' %}" class="navbar-brand home"><img src="img/logo.png" alt="Universal logo" class="d-none d-md-inline-block"><img src="img/logo-small.png" alt="Universal logo" class="d-inline-block d-md-none"><span class="sr-only">Universal - go to homepage</span></a>
+            <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
+            <div id="navigation" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item active">
+                      <a href="{% url 'myapp:product_list' %}">Homepage</a>
+                </li>
+                <li class="nav-item "><a href="#">Contact <b class="caret"></b></a></li>
+                <li class="nav-item "><a href="javascript: void(0)">About <b class="caret"></b></a></li>
+              </ul>
+            </div>
+            <div id="search" class="collapse clearfix">
+              <form role="search" class="navbar-form">
+                <div class="input-group">
+                  <input type="text" placeholder="Search" class="form-control"><span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </header>
+      {% block content %}
+
+
+      {% endblock %}
+      <!-- FOOTER -->
+      <footer class="main-footer">
+        <div class="copyrights">
+          <div class="container">
+              <div class="col-lg-8 text-right text-center-md">
+                <p>&copy; 2019. Your company / name goes here</p>
+              </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+      <!-- Javascript files-->
+      <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+      <script src="{% static 'vendor/popper.js/umd/popper.min.js' %}"> </script>
+      <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'vendor/jquery.cookie/jquery.cookie.js' %}"> </script>
+      <script src="{% static 'vendor/waypoints/lib/jquery.waypoints.min.js' %}"> </script>
+      <script src="{% static 'vendor/jquery.counterup/jquery.counterup.min.js' %}"> </script>
+      <script src="{% static 'vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+      <script src="{% static 'vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js' %}"></script>
+      <script src="{% static 'vendor/bootstrap-select/js/bootstrap-select.min.js' %}"></script>
+      <script src="{% static 'vendor/jquery.scrollto/jquery.scrollTo.min.js' %}"></script>
+    </body>
+
+</html>

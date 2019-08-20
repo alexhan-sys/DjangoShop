@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+{{ product.name }}
+{% endblock %}
+{% block content %}
+
+
+ <div id="all">
+      <div id="content">
+        <div class="container">
+          <div class="row bar">
+            <!-- LEFT COLUMN _________________________________________________________-->
+            <div class="col-lg-9">
+              <div id="productMain" class="row">
+                <div class="col-sm-6">
+                    <div>
+                     <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="box">
+                    <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                      <div class="sizes">
+                        <h3>Price</h3>
+                      </div>
+                      <p class="price">${{ product.price }}</p>
+                      <p class="text-center">
+                      {{ cart_product_form }}
+                      {% csrf_token %}
+                        <button>
+                         <input type="submit" class="btn btn-template-outlined"/><i class="fa fa-shopping-cart"></i> Add to cart
+                        </button>
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div id="details" class="box mb-4 mt-4">
+                <p></p>
+                <h4>Product details</h4>
+                <blockquote class="blockquote">
+                  <p class="mb-0"><em>{{ product.description|linebreaks }}</em></p>
+                </blockquote>
+              </div>
+              <div id="product-social" class="box social text-center mb-5 mt-5">
+                <h4 class="heading-light">Show it to your friends</h4>
+                <ul class="social list-inline">
+                  <li class="list-inline-item"><a href="#" data-animate-hover="pulse" class="external facebook"><i class="fa fa-facebook"></i></a></li>
+                  <li class="list-inline-item"><a href="#" data-animate-hover="pulse" class="external gplus"><i class="fa fa-google-plus"></i></a></li>
+                  <li class="list-inline-item"><a href="#" data-animate-hover="pulse" class="external twitter"><i class="fa fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a href="#" data-animate-hover="pulse" class="email"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <!-- MENUS AND FILTERS-->
+              <div class="panel panel-default sidebar-menu">
+                  <div class="panel-heading">
+                    <h3 class="h4 panel-title">Categories</h3>
+                  </div>
+                  <div class="panel-body">
+                    <ul class="nav nav-pills flex-column text-sm category-menu">
+                      <li class="nav-item"><a href="#" class="nav-link active d-flex align-items-center justify-content-between"><span>Tech  </span><span class="badge badge-light">123</span></a><br/><br/></li>
+                      <li class="nav-item"><a href="#" class="nav-link active d-flex align-items-center justify-content-between"><span>T-Shirt  </span><span class="badge badge-light">123</span></a><br/><br/></li>
+                      <li class="nav-item"><a href="#" class="nav-link active d-flex align-items-center justify-content-between"><span>Jeans </span><span class="badge badge-light">123</span></a><br/><br/></li>
+                      <li class="nav-item"><a href="#" class="nav-link active d-flex align-items-center justify-content-between"><span>Books  </span><span class="badge badge-light">123</span></a><br/><br/></li>
+                      <li class="nav-item"><a href="#" class="nav-link active d-flex align-items-center justify-content-between"><span>Toys  </span><span class="badge badge-light">123</span></a><br/><br/></li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+
+{% endblock %}
