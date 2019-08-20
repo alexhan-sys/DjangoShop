@@ -1,1 +1,4 @@
-# Django_Shop
+### Django_Shop
+
+### Installation
+**Setup Virtualenv**
