@@ -30,5 +30,5 @@ python manage.py runserver
 ```
 
 # Screenshot
-###Homepage
-![](screenshot/header.png)
+### Homepage
+![](screenshot/homepage.png)
